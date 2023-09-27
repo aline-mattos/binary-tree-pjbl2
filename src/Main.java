@@ -11,7 +11,7 @@ public class Main {
         arvoreBinaria.inserir(5);
 
         arvoreBinaria.imprimeArvore();
-        arvoreBinaria.deletar(6);
+        arvoreBinaria.remover(6);
         arvoreBinaria.imprimeArvore();
         arvoreBinaria.buscar(6);
 

@@ -50,17 +50,17 @@ public class Arvore {
     }
 
     // Delete a key from the tree
-    public No deletar(int dado) {
-        return deletarRecursivo(raiz, dado);
+    public No remover(int dado) {
+        return removerRecursivo(raiz, dado);
     }
 
-    private No deletarRecursivo(No no, int dado) {
+    private No removerRecursivo(No no, int dado) {
         if (no.getDado() == dado) {
             no = encontraSucessor(no);
         } else if (dado < no.getDado()) {
-            no.setEsquerdo(deletarRecursivo(no.getEsquerdo(), dado));
+            no.setEsquerdo(removerRecursivo(no.getEsquerdo(), dado));
         } else {
-            no.setDireito(deletarRecursivo(no.getDireito(), dado));
+            no.setDireito(removerRecursivo(no.getDireito(), dado));
         }
         return no;
     }
